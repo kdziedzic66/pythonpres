@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wprowadzenie do Pythona</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Wprowadzenie do Pythona">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Wprowadzenie do Pythona</h1>
+    <h2></h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <p>Apache Spark to narzedzie do pracy z Big Data. Posiada bardzo przejrzyste API do pracy z danymi z poziomu kodu (Java,Scala,R,Python). Pozwala na szybka prace z danymi ( dane nie s¹ za kazdym razem zapisywane na dysk jak w MapReduce, tylko mozemy cachowac je w pamieci co pozwala na zwiekszenie nawet 100x szybkosci algorytmow ). W szczegolnosci roznica ta jest istotna w pracy z algorytmami iteracyjnymi, m. in. machine learning. MapReduce w ka¿dym kroku iteracji zapisuje dane na dysk i czyta z niego, podczas gdy Spark czyta z pamieci. Python jest bardzo prostym jezykiem o ladnej i przejrzystej skladni, dzieki czemu mamy mozliwosc pracy z danymi wedlug jednego, okreslonego wzorca bez koniecznosci uczenia sie wielu narzedzi nale¿¹cych do ecosystemu Hadoopa.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <article data-timings="">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SxAxAhn-BDU?autoplay=1"></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h1>Instalacja Pythona</h1>
+  </hgroup>
+  <article data-timings="">
+    <p>Jak wiadomo przygode z Pythonem nalezaloby rozpoczac od instalacji tegoz Pythona. Zrodlo z ktorego mozemy pobrac i zainstalowac tegoz Pythona, to <a href="http://www.python.org/downloads">www.python.org/downloads</a>. Wybieramy wersje - 3.5 lub 2.7. istnieje pewna roznica pomiedzy Pythonem 2 i 3 - sporo bibliotek Pythonowych nie jest jeszcze kompatybilna z Pythonem 3.5. Nastepny krok to wybor i instalacja IDE (integrated development environment). W trakcie warsztatow bedziemy uzywac PyCharm, ktore mozemy pobrac z <a href="https://www.jetbrains.com/pycharm/?fromMenu">https://www.jetbrains.com/pycharm/?fromMenu</a>. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h1>Podstawy skladni jezyka</h1>
+  </hgroup>
+  <article data-timings="">
+    <p>Jezyk dynamicznie typowany w trakcie deklaracji zmiennej nie okreslamy jej typu, typ zostaje przydzielony w trakcie wykonywania programu. Na koncu linijki nie stawiamy srednika. Instrukcje ktore maja byc wykonywane wewnatrz petli, instrukcji warunkowej badz bloku try/except (za chwile wyjasnimy co znacza te pojecia :)) sa odzielone czterema spacjami wewnatrz instrukcji. </p>
+
+<h1>Przyklad 1:</h1>
+
+<p>Wprowadzamy dwie liczby z klawiatury. Zwroc sume, iloczyn i iloraz.</p>
+
+<h1>Przyklad 2:</h1>
+
+<p>Wprowadzamy liczbe z klawiatury. Zwroc pierwiastek z liczby.</p>
+
+<h1>Przyklad 3:</h1>
+
+<p>Wprowadz dwie liczby z klawiatury, jesli druga z nich jest rowna 0 wyswietl &quot;jasna cholero nie dziel przez 0&quot;, jesli jest rozna od 0 zwroc iloraz.</p>
+
+<h1>Przyklad 4:</h1>
+
+<p>Wiadomo, ze \(\frac{\pi}{4}=arctg(1)\). Przypomnijmy, ze \(\operatorname{arctg} x = \sum^{\infty}_{n=0} \frac{(-1)^n}{2n+1} x^{2n+1},\; |x| \leq 1\). Wyswietl przyblizenie liczby pi.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h1>Przyklad 5:</h1>
+  </hgroup>
+  <article data-timings="">
+    <p>Rozwiaz poprzednie zadanie jako funkcje zmiennej n, okreslajacej liczbe iteracji petli.</p>
+
+<h1>Przyklad 6:</h1>
+
+<p>Definiujemy slownik glupoty: przypisujemy roznym wyrazom pewne wartosci i w zaleznosci od tego ile tych wyrazow jest w zdaniu dodajemy do zdania wartosc jego glupoty. Napisz funkcje, ktora dla danego zdania zwroci wartosc jego glupoty.</p>
+
+<h1>Przyklad 7:</h1>
+
+<p>Napisz funkcje, ktora dla danego stringa zwroci True jesli reprezentuje on wartosc numeryczna, a w przeciwnym wypadku zwroci False.</p>
+
+<h1>Przyklad 8:</h1>
+
+<p>Napisz funkcje, ktora dla danego stringa usunie z niego wszystkie znaki, ktore nie sa alfanumeryczne.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h1>Przyklad 9:</h1>
+  </hgroup>
+  <article data-timings="">
+    <p>Wordcount w Spark</p>
+
+<h1>Przyklad 10:</h1>
+
+<p>Napisz funkcje, ktora dla danego tekstu wczytanego z pliku tekstowego zwróci s³ownik zawieraj¹ce pary klucz-wartoœæ, gdzie kluczami s¹ wyrazy, a wartoœciami term frequency danego wyrazu.</p>
+
+<h1>Przyklad 11:</h1>
+
+<p>Posortuj przyklady z wczesniejszego zadania po wartosci.</p>
+
+<h1>Przyklad 12:</h1>
+
+<p>Napisz funkcje, ktora poisson(n,lambd), ktora wygeneruje probe o dlugosci n z rozkladu Poissona z parametrem lambd.</p>
+
+<h1>Przyklad 13:</h1>
+
+<p>Napisz funkcje integral(a,b,f), ktora obliczy przyblizona wartosc \(\int_a^bf(x)dx\) dla danej ciaglej funkcji f.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='NA'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='NA'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Instalacja Pythona'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Podstawy skladni jezyka'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Przyklad 5:'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Przyklad 9:'>
+         6
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
